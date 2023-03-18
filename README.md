@@ -7,3 +7,5 @@ Competicion de kaggle sobre el dataset del titanic
 
 ## Resultados de los distintimos modelos:
 - Regresion logistica simple = 0.622
+- Regresion logistica multiple = 0.62918
+
