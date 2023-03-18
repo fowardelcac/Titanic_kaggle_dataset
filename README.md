@@ -10,4 +10,4 @@ Competicion de kaggle sobre el dataset del titanic
 - Regresion logistica multiple:
 --  Normalizando la edad: 0.629
 -- Sin normalizar: 0.75119
-
+- Arbol de decision max_depth = 3: 0.739
