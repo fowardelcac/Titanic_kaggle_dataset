@@ -7,5 +7,7 @@ Competicion de kaggle sobre el dataset del titanic
 
 ## Resultados de los distintimos modelos:
 - Regresion logistica simple = 0.622
-- Regresion logistica multiple = 0.62918
+- Regresion logistica multiple:
+--  Normalizando la edad: 0.629
+-- Sin normalizar: 0.75119
 
