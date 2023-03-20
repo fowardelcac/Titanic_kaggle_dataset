@@ -11,3 +11,5 @@ Competicion de kaggle sobre el dataset del titanic
 --  Normalizando la edad: 0.629
 -- Sin normalizar: 0.75119
 - Arbol de decision max_depth = 3: 0.739
+
+En el archivo 'Proyecto_completo' esta todo el proyecto paso a paso como lo realice, con sus distintas iteraciones, y en proyecto_final se encuentra ordenado con el algoritmo final.
