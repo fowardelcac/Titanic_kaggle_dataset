@@ -23,7 +23,7 @@ st.set_page_config(
     )
 
 
-train_url = 'https://raw.githubusercontent.com/fowardelcac/Titanic_kaggle_dataset/main/testt.csv'
+train_url = 'https://raw.githubusercontent.com/fowardelcac/Titanic_kaggle_dataset/main/trainn.csv'
 test_url = 'https://raw.githubusercontent.com/fowardelcac/Titanic_kaggle_dataset/main/testt.csv'
 train, test = pd.read_csv(train_url), pd.read_csv(test_url)
 
