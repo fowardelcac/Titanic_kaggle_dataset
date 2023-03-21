@@ -36,7 +36,7 @@ model = modelo(X_train, X_test, y_train, y_test)
 st.session_state.rf = modelo
 if 'rf' in st.session_state:
     X_test_kaggle = test[['Pclass', 'Sex', 'Age']]
-    y_pred = model.predict(X_test)
+    y_pred = st.session_state.rf.predict(X_test)
     print(accuracy_score(y_test, y_pred))    
 
     st.title("Modelo para predecir sobrevivientes del Titanic.")
@@ -63,7 +63,7 @@ if 'rf' in st.session_state:
 
     X_predict = [[convert_pclas(P_class), convert_s(Sex_), Age_]]
 
-    prediccion = model.predict(X_predict)
+    prediccion = st.session_state.rf.predict(X_predict)
 
     if prediccion[0] == 0:
         st.text("No sobreviviente 😔😔")
