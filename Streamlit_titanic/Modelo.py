@@ -9,7 +9,7 @@ from sklearn.metrics import accuracy_score
 
 
 
-@st.cache
+@st.cache_data
 def modelo(X_train, X_test, y_train, y_test):
     model = RandomForestClassifier(criterion = 'entropy', 
                                    max_depth =  5, n_estimators = 100, random_state = 42)
