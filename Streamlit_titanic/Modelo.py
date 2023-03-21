@@ -33,42 +33,43 @@ y = train.Survived.to_numpy()
 X_train, X_test, y_train, y_test = train_test_split(X, y, random_state = 42)
 
 model = modelo(X_train, X_test, y_train, y_test)
+st.session_state.rf = modelo
+if 'rf' in st.session_state:
+    X_test_kaggle = test[['Pclass', 'Sex', 'Age']]
+    y_pred = model.predict(X_test)
+    print(accuracy_score(y_test, y_pred))    
 
-X_test_kaggle = test[['Pclass', 'Sex', 'Age']]
-y_pred = model.predict(X_test)
-print(accuracy_score(y_test, y_pred))    
-
-st.title("Modelo para predecir sobrevivientes del Titanic.")
-st.subheader("Esta aplicacion surge a raiz de la competencia de Kaggle.")
+    st.title("Modelo para predecir sobrevivientes del Titanic.")
+    st.subheader("Esta aplicacion surge a raiz de la competencia de Kaggle.")
 
 
-#'Pclass', 'Sex', 'Age'
-P_class = st.selectbox("Selecciona tu clase social: ", ('Baja', 'Media', 'Alta'))
-Sex_ = st.selectbox("Selecciona tu sexo: ", ('Hombre', 'Mujer'))
-Age_ = st.slider("Selecciona tu edad: ", min_value = 1, max_value = 80)
+    #'Pclass', 'Sex', 'Age'
+    P_class = st.selectbox("Selecciona tu clase social: ", ('Baja', 'Media', 'Alta'))
+    Sex_ = st.selectbox("Selecciona tu sexo: ", ('Hombre', 'Mujer'))
+    Age_ = st.slider("Selecciona tu edad: ", min_value = 1, max_value = 80)
 
-def convert_pclas(pclas):
-    if pclas == 'Baja':
-        return 3
-    elif pclas == 'Media':
-        return 2
+    def convert_pclas(pclas):
+        if pclas == 'Baja':
+            return 3
+        elif pclas == 'Media':
+            return 2
+        else:
+            return 1
+    def convert_s(sex):
+        if sex == 'Hombre':
+            return 0
+        else:
+            return 1
+
+    X_predict = [[convert_pclas(P_class), convert_s(Sex_), Age_]]
+
+    prediccion = model.predict(X_predict)
+
+    if prediccion[0] == 0:
+        st.text("No sobreviviente 😔😔")
     else:
-        return 1
-def convert_s(sex):
-    if sex == 'Hombre':
-        return 0
-    else:
-        return 1
-        
-X_predict = [[convert_pclas(P_class), convert_s(Sex_), Age_]]
+        st.text("Sobreviviente!! 😃😃")
 
-prediccion = model.predict(X_predict)
 
-if prediccion[0] == 0:
-    st.text("No sobreviviente 😔😔")
-else:
-    st.text("Sobreviviente!! 😃😃")
-    
-    
 
-    
+
