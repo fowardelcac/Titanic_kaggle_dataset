@@ -23,8 +23,9 @@ st.set_page_config(
     )
 
 
-
-train, test = pd.read_csv('D:/DatosD/Ml/Supervizado/Kaggle/Titanic/trainn.csv'), pd.read_csv('D:/DatosD/Ml/Supervizado/Kaggle/Titanic/testt.csv')
+train_url = 'https://raw.githubusercontent.com/fowardelcac/Titanic_kaggle_dataset/main/testt.csv'
+test_url = 'https://raw.githubusercontent.com/fowardelcac/Titanic_kaggle_dataset/main/testt.csv'
+train, test = pd.read_csv(train_url), pd.read_csv(test_url)
 
 X = train[['Pclass', 'Sex', 'Age']]
 y = train.Survived.to_numpy()
