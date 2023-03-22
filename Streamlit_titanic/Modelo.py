@@ -70,8 +70,6 @@ if prediccion[0] == 0:
 else:
     st.text("Sobreviviente!! 😃😃")
 
-
-
 st.title("Visualizaciones.")    
 st.text("A continuacion se presentan graficos para generar una mejor compresion de los datos.")
 
@@ -88,8 +86,7 @@ st.subheader("Supervivientes en funcion de su edad.")
 sup_age = train.groupby('Age')['Supervivientes'].sum()
 sup_age_df = pd.DataFrame(sup_age)
 #st.bar_chart(sup_age_df)
-hist = sns.histplot(data=sup_age_df, x= sup_age_df.index, bins = 10)
-st.pyplot(hist)
+sns.histplot(data=sup_age_df, x= sup_age_df.index, bins = 10)
 
 st.subheader("Supervivientes en funcion de su clase social.")
 sup_clas = train.groupby('Pclass')['Supervivientes'].sum()
