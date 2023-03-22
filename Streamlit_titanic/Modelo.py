@@ -71,4 +71,28 @@ else:
 
 
 
+st.title("Visualizaciones.")    
+st.text("A continuacion se presentan graficos para generar una mejor compresion de los datos.")
+
+st.subheader("Supervivientes en funcion del sexo")
+
+train = train.rename(columns={'Survived': 'Supervivientes'})
+
+sup_sex = train.groupby('Sex')['Supervivientes'].sum()
+sup_sex_df = pd.DataFrame(sup_sex)
+sup_sex_df = sup_sex_df.rename(index={0: 'Hombre', 1: 'Mujer'})
+st.bar_chart(sup_sex_df)
+
+st.subheader("Supervivientes en funcion de su edad.")
+sup_age = train.groupby('Age')['Supervivientes'].sum()
+sup_age_df = pd.DataFrame(sup_age)
+#st.bar_chart(sup_age_df)
+sns.histplot(data=sup_age_df, x= sup_age_df.index)
+st.pyplot()
+
+st.subheader("Supervivientes en funcion de su clase social.")
+sup_clas = train.groupby('Pclass')['Supervivientes'].sum()
+sup_clas_df = pd.DataFrame(sup_clas)
+sup_clas_df = sup_clas_df.rename(index={1: 'Alta', 2: 'Media', 3: 'Baja'})
+st.bar_chart(sup_clas_df)
 
