@@ -9,7 +9,7 @@ Competicion de kaggle sobre el dataset del titanic
 
 En el archivo 'Proyecto_completo' esta todo el proyecto paso a paso como lo realice, con sus distintas iteraciones, y en proyecto_final se encuentra ordenado con el algoritmo final.
 
-Finalmente despues de distintas iteraciones sobre los atributos y modelos, elegi el algoritmo de random forest, lo elegi de acuerdo a su precision del 0.77751.
+Finalmente despues de distintas iteraciones sobre los atributos y modelos, elegi el algoritmo de random forest, lo elegi de acuerdo a su precision del 0.779.
 
 El proyecto final es una aplicacion interactiva construida sobre Streamlit, se encuentra en:
 https://fowardelcac-titanic-kaggle-datas-streamlit-titanicmodelo-ia99ld.streamlit.app/
