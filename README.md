@@ -13,3 +13,9 @@ Finalmente despues de distintas iteraciones sobre los atributos y modelos, elegi
 
 El proyecto final es una aplicacion interactiva construida sobre Streamlit, se encuentra en:
 https://fowardelcac-titanic-kaggle-datas-streamlit-titanicmodelo-ia99ld.streamlit.app/
+
+### Capturas de pantalla.
+![image](https://user-images.githubusercontent.com/70445613/229177873-9ad4db00-73b0-45d8-885f-f47d49130c6a.png)
+![image](https://user-images.githubusercontent.com/70445613/229177943-17c2137b-658d-4427-bdfe-648db38371a5.png)
+![image](https://user-images.githubusercontent.com/70445613/229177981-8de539dd-b6c6-4c71-b51a-d6bbcae6f1ca.png)
+![image](https://user-images.githubusercontent.com/70445613/229178022-5dd9edd2-df7b-493a-9d23-af0beee626a7.png)
